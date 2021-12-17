@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = process.env.VCAP_APP_PORT || app.get('port');
+const port = process.env.PORT || 3000;
 
 app.use(express.json()) // for parsing application/json
 
