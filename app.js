@@ -7,7 +7,7 @@ app.use(express.json()) // for parsing application/json
 function isValid(data) {
     const fields = ['width', 'height', 'length'];
     for (let field of fields) {
-        if (data[field] <= 0 || data[field] > 10) {
+        if (!data[field] || data[field] <= 0 || data[field] > 10) {
             return `${field} dimention must be greater than 0 and lester or equal to 10`
         }
     }
